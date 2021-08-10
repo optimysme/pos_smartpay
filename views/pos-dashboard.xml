@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_config_kanban" model="ir.ui.view">
+        <field name="name">pos.config.kanban.view</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_config_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="has_smartpay"/>
+                <field name="smartpay_register_uuid"/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_kanban_card_content')]/div[hasclass('row')]" position="after">
+                <div t-if="record.has_smartpay.raw_value" class="row mt-2">
+                    <div class="col-6">
+                        <button class="btn btn-info" name="button_pair_smartpay" type="object">Pair Smartpay</button>
+                    </div>
+                    <div class="col-6">
+                        <div t-if="record.smartpay_register_uuid.value" class="text-info">Paired</div>
+                        <div t-if="!record.smartpay_register_uuid.value" class="text-danger">Unpaired</div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

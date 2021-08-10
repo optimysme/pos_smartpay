@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="smartpay_tx_access" model="ir.model.access">
+        <field name="name">Smartpay Pairing</field>
+        <field name="model_id" ref="model_pos_smartpay_tx"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+</odoo>
