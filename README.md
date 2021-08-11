@@ -25,13 +25,13 @@ Possible *endpoint* values are available here: https://smartpaydev.com/reference
 - Point of Sale -> Configuration -> Payment Methods -> %your card payment method% -> Use a Payment Terminal - Select Smartpay  
 - Associate that payment method with your POS shop  
 - A new Pairing button (left) with the status (right) will appear on the shop tile  
-
 ![](https://github.com/ykya/pos_smartpay/raw/main/documentation/170018.png)  
 
 ## POS Usage  
-Select a product and navigate to Payment screen
-Select the appropriate form of payment and click Send  
+1. Select a product and navigate to Payment screen  
+2. Select the appropriate form of payment and click Send  
 ![](https://github.com/ykya/pos_smartpay/raw/main/documentation/170019.png)  
+
 If the payment was successful, the status will change and you will be able to validate the order. If unsuccessfully, an error will be displayed with the message.  
 
 
