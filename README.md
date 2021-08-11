@@ -30,6 +30,9 @@ Possible *endpoint* values are available here: https://smartpaydev.com/reference
 
 ## POS Usage  
 Select a product and navigate to payment screen
-Select the appropriate form of payment and click Send
+Select the appropriate form of payment and click Send  
+![](https://github.com/ykya/pos_smartpay/raw/main/documentation/170019.png)
+If the payment was successful, the status will change and you will be able to validate the order. If unsuccessfull, an error will be displayed with the message.  
+
 
 ## POS Error Handling
