@@ -26,3 +26,4 @@ Point of Sale -> Configuration -> Payment Methods -> %your card payment method% 
 Associate that payment method with your POS shop  
 A new Pairing button will appear on the shop
 
+ttete
