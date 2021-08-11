@@ -24,6 +24,7 @@ Possible *endpoint* values are available here: https://smartpaydev.com/reference
 ## POS Setup  
 Point of Sale -> Configuration -> Payment Methods -> %your card payment method% -> Use a Payment Terminal - Select Smartpay  
 Associate that payment method with your POS shop  
-A new Pairing button will appear on the shop
+A new Pairing button will appear on the shop  
 
-ttete
+![](https://github.com/ykya/pos_smartpay/documentation/170018.png)
+
