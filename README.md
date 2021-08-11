@@ -1,13 +1,13 @@
 # Smartpay POS Integration
 
-This module integrates [Smartpay](https://smartpay.co.nz) POS terminals with Odoo's [POS module](https://www.odoo.com/app/point-of-sale-shop). Developed by [Solnet Solutions](https://solnet.co.nz).
+This module integrates [Smartpay](https://smartpay.co.nz) POS terminals with Odoo's [POS module](https://www.odoo.com/app/point-of-sale-shop) via the API. Developed by [Solnet Solutions](https://solnet.co.nz).
 
 ### In scope:
-- Pairing shop with the eftpos terminal. Supports 1 to 1 shop pairings
+- Pairing POS shop with the eftpos terminal. Supports 1 to 1 shop pairings
 - Purchase handling
 - Refund handling  
   
-All other operations such as QR codes scanning, tipping etc are not supported.
+All other operations such as QR codes scanning, tipping, etc. are not supported.
 
 ## Server Configuration:
 Endpoints are configured in the .rc files:
@@ -29,10 +29,14 @@ Possible *endpoint* values are available here: https://smartpaydev.com/reference
 ![](https://github.com/ykya/pos_smartpay/raw/main/documentation/170018.png)  
 
 ## POS Usage  
-Select a product and navigate to payment screen
+Select a product and navigate to Payment screen
 Select the appropriate form of payment and click Send  
-![](https://github.com/ykya/pos_smartpay/raw/main/documentation/170019.png)
-If the payment was successful, the status will change and you will be able to validate the order. If unsuccessfull, an error will be displayed with the message.  
+![](https://github.com/ykya/pos_smartpay/raw/main/documentation/170019.png)  
+If the payment was successful, the status will change and you will be able to validate the order. If unsuccessfully, an error will be displayed with the message.  
 
 
 ## POS Error Handling
+There are several error checks that have been built into the system:
+- POS gets closed during the payment transaction being in progress - Reopen POS, click Payment and Click Send. The system will attempt to fetch the status of last transaction.
+- Eftpos terminal power cut on Accepted payment screen - POS will fetch the latest update from the Smartpay API.
+- Eftpos terminal power cut on Processing payment screen - POS will fetch the latest update from the Smartpay API.
