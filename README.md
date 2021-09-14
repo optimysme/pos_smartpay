@@ -38,6 +38,5 @@ If the payment was successful, the status will change and you will be able to va
 ## POS Error Handling
 There are several error checks that have been built into the system:
 - POS gets closed during the payment transaction being in progress - Reopen POS, click Payment and Click Send. The system will attempt to fetch the status of last transaction.
-![](static/description/170020.png)  
 - Eftpos terminal power cut on Accepted payment screen - POS will fetch the latest update from the Smartpay API.
 - Eftpos terminal power cut on Processing payment screen - POS will fetch the latest update from the Smartpay API.
